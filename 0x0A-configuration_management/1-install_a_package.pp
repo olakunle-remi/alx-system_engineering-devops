@@ -1,5 +1,6 @@
-# Using Puppet, install flask from pip3
-package { 'flask':
-  ensure   => '2.1.0',
-  provider => 'pip3'
+# Executes a bash command
+exec { 'killmenow':
+  command    => '/usr/bin/pkill killmenow',
+  provider =>'shell',
+  returns =>[0, 1],
 }
